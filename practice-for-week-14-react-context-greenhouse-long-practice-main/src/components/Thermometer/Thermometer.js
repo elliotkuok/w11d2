@@ -14,7 +14,7 @@ function Thermometer() {
       } else if (temperature > goalTemperature) {
         setTemperature(prev => prev - 1);
       }
-    }, 500)
+    }, 1000)
 
     return () => clearTimeout(timerId);
   },[temperature, goalTemperature, setTemperature]);
